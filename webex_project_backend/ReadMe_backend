@@ -1,0 +1,14 @@
+This text file is a guide on how to start the test backend in postman.
+1.- I have created a local database connection in MySQL, called webex. In the backend, following the path
+src/main/resources/ in the application.properties file, I code the necessary elements for the connection.
+2.- In the path src/main/java/com.example.webex_project_backend I have created several packages to configure the handling of the data.
+3.- The first package created is: model, with a user file to create and structure a table in the database called test.
+4.- Second, I have created a package (repositories) with a file (UserReposIntef) which calls the JpaRepository class
+to work with the methods that come in it, such as findAll, findById, etc.
+5.- Then I created a package (exception) with a file to control possible errors in the execution of calls.
+6.- Finally I have created a package (controllers) with a file (UserController) that manages the different calls
+to the table in the database. Currently I am working on it. At first I made a sentence for testing a user list. It is working.
+
+Now I am trying to create a login command (in progress).
+
+You can run the backend and test the list on Postman to see the result.

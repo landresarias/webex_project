@@ -27,7 +27,7 @@ export default function Setup(){
     const [isOpen, setIsOpen] = useState('true');
     const refUser = useRef("");
     const refPassword = useRef("");
-    //const [login, setLogin] = useState({username: "", password: ""})
+    const [login, setLogin] = useState({username: "", password: ""})
     const [user, setUser] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -42,9 +42,6 @@ export default function Setup(){
             })
     }, []);
 
-    if (loading){
-        return <p>Loading...</p>
-    }
     //------------------------------------------------------------------react
 
     const handleChange = (e,parField)=>{
@@ -71,12 +68,8 @@ export default function Setup(){
 
     return(
         <div className="col-sm-7" style={setup}>
-
-
             { isOpen === "true" && (
-
                 <div className="Auth-form-container" style={Form1}>
-                { user.map((getUser)=>
                     <form className="Auth-form" style={Form2}>
                         <div className="Auth-form-content">
                             <h3 className="Auth-form-title">Sign In</h3>
@@ -89,7 +82,7 @@ export default function Setup(){
                                         required />
                             </div>
                             <div className="d-grid gap-2 mt-3">
-                                <button type="submit" className="btn btn-primary" onClick={()=> Submit(getUser)}>Submit</button>
+                                <button type="submit" className="btn btn-primary" onClick={()=> Submit}>Submit</button>
                             </div>
                             <p className="text-center mt-2" style={{ fontSize: '1.3rem' }}>
                                 <a onClick={() => setIsOpen('false')}>Cancel</a>
@@ -97,7 +90,6 @@ export default function Setup(){
                         </div>
                         <ToastContainer autoClose={2500}></ToastContainer>
                     </form>
-                    )}
                 </div>
             )}
             <div>
