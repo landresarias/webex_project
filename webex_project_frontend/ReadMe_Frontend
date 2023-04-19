@@ -15,3 +15,5 @@ Creating Meeting to hold an online meeting, Meetings List to show a list of meet
 to be held (in progress).
 10.- A Contact page created only to test the backend connections (So far only the call to the
 database to display a list of users works)
+
+I am using IntelliJ IDEA platform 2022.3.3 (Ultimate Edition) for frontend(react js) and backend(Spring Boot).
