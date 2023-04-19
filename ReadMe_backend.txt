@@ -12,6 +12,13 @@ to the table in the database. Currently I am working on it. At first I made a se
 Now I am trying to create a login command (in progress).
 
 I am using IntelliJ IDEA platform 2022.3.3 (Ultimate Edition) for frontend(react js) and backend(Spring Boot).
+Backend:
+    - Maven
+    - Java 17
+    - Packaging Jar
+    - Dependencies: Spring Boot DevTools, Spring Data JPA, MySQL Driver, Spring Web.
+
+Frontend: React js, Bootstrap, react-toastify
 
 You can run the backend and test the list on Postman to see the result:
 - GET - http://localhost:8080/api/users/list - to display all the records contained in the users table.
